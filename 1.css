@@ -1,0 +1,1012 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #fff8cf;
+    color: #654900;
+    overflow-x: hidden;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* =================================
+   PANTALLA DE ENTRADA
+================================= */
+
+#pantallaEntrada {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #fff9cf,
+            #ffe77a,
+            #f7c92e
+        );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    transition:
+        opacity 1s ease,
+        visibility 1s ease;
+}
+
+#pantallaEntrada.ocultar {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.entrada-contenido {
+    padding: 30px;
+    max-width: 380px;
+}
+
+.flor-entrada {
+    font-size: 85px;
+
+    animation:
+        flotar 3s ease-in-out infinite,
+        girarFlor 8s linear infinite;
+}
+
+.entrada-pequeno {
+    margin-top: 20px;
+    font-size: 17px;
+}
+
+.entrada-contenido h1 {
+    color: #c58a00;
+    font-size: 50px;
+    margin: 10px 0;
+}
+
+.entrada-texto {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+#abrirBtn {
+    margin-top: 30px;
+
+    border: 0;
+    border-radius: 50px;
+
+    padding: 17px 30px;
+
+    background: #e9ae00;
+    color: white;
+
+    font-size: 18px;
+
+    box-shadow:
+        0 10px 30px rgba(174, 124, 0, .3);
+
+    cursor: pointer;
+
+    animation: pulso 2s infinite;
+}
+
+.toque {
+    margin-top: 20px;
+    font-size: 13px;
+    opacity: .6;
+}
+
+
+/* =================================
+   PÁGINA
+================================= */
+
+#pagina {
+    min-height: 100vh;
+    position: relative;
+}
+
+
+/* =================================
+   HERO
+================================= */
+
+.hero {
+    min-height: 100vh;
+
+    padding:
+        70px
+        25px
+        50px;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            #fffde5,
+            #fff3a3 55%,
+            #ffdf52
+        );
+}
+
+.sobre {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #a67a00;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 15vw, 70px);
+    color: #d69a00;
+
+    margin: 10px 0;
+
+    text-shadow:
+        0 4px 15px rgba(160, 110, 0, .2);
+}
+
+.hero h1 span {
+    font-size: .6em;
+}
+
+.hero-subtitulo {
+    font-size: 21px;
+    line-height: 1.5;
+    max-width: 320px;
+}
+
+
+/* =================================
+   CRISANTEMO
+================================= */
+
+.crisantemo-grande {
+    width: 190px;
+    height: 190px;
+
+    margin: 35px 0;
+
+    position: relative;
+
+    animation:
+        flotar 4s ease-in-out infinite;
+
+    filter:
+        drop-shadow(
+            0 15px 18px
+            rgba(150, 100, 0, .22)
+        );
+}
+
+.petalos {
+    position: absolute;
+    inset: 0;
+
+    border-radius: 50%;
+
+    background:
+        repeating-conic-gradient(
+            from 0deg,
+            #ffd31a 0deg 5deg,
+            #fff178 5deg 10deg,
+            #f4b900 10deg 14deg
+        );
+
+    transform: scale(.92);
+
+    box-shadow:
+        inset 0 0 15px rgba(180, 120, 0, .2);
+}
+
+.petalos::before {
+    content: "";
+
+    position: absolute;
+    inset: 15px;
+
+    border-radius: 50%;
+
+    background:
+        repeating-conic-gradient(
+            from 5deg,
+            #fff27a 0deg 5deg,
+            #ffc800 5deg 10deg
+        );
+}
+
+.centro-flor {
+    width: 45px;
+    height: 45px;
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            #8b5b00 0 30%,
+            #bd8000 31% 60%,
+            #704800 61%
+        );
+
+    z-index: 3;
+}
+
+
+/* =================================
+   MENSAJE
+================================= */
+
+.hero-mensaje {
+    max-width: 340px;
+
+    font-size: 17px;
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+}
+
+.scroll-btn,
+.volver {
+    border: 0;
+
+    background: #e5aa00;
+
+    color: white;
+
+    border-radius: 50px;
+
+    padding: 14px 22px;
+
+    font-size: 15px;
+
+    box-shadow:
+        0 8px 20px
+        rgba(170, 120, 0, .25);
+
+    cursor: pointer;
+}
+
+
+/* =================================
+   SECCIONES
+================================= */
+
+.seccion {
+    padding: 80px 22px;
+
+    text-align: center;
+}
+
+.etiqueta {
+    font-size: 11px;
+    letter-spacing: 2px;
+
+    color: #b78600;
+
+    margin-bottom: 10px;
+}
+
+.seccion h2,
+.noche h2 {
+    font-size: 34px;
+
+    color: #b47d00;
+
+    margin-bottom: 20px;
+}
+
+.descripcion {
+    max-width: 350px;
+    margin: 0 auto 35px;
+
+    line-height: 1.6;
+}
+
+
+/* =================================
+   CARTA
+================================= */
+
+.carta {
+    background:
+        linear-gradient(
+            180deg,
+            #fff9d9,
+            #fff3ba
+        );
+}
+
+.carta-papel {
+    max-width: 380px;
+
+    margin: auto;
+
+    padding: 40px 27px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fffdf0,
+            #fff6ca
+        );
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 15px 40px
+        rgba(130, 90, 0, .15);
+
+    position: relative;
+
+    text-align: left;
+
+    line-height: 1.8;
+
+    font-size: 17px;
+}
+
+.carta-papel::before {
+    content: "";
+
+    position: absolute;
+    inset: 8px;
+
+    border: 1px solid #ead27a;
+
+    pointer-events: none;
+}
+
+.sello {
+    width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+
+    background: #ffd52b;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 auto 25px;
+
+    font-size: 28px;
+}
+
+.carta-papel p {
+    margin-bottom: 20px;
+}
+
+.firma {
+    text-align: right;
+
+    color: #ae7800;
+
+    font-style: italic;
+}
+
+
+/* =================================
+   TARJETAS
+================================= */
+
+.razones {
+    background: #fffdf0;
+}
+
+.tarjetas {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 14px;
+
+    max-width: 430px;
+
+    margin: auto;
+}
+
+.tarjeta {
+    padding: 23px 15px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #fffef0,
+            #fff4b5
+        );
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 20px
+        rgba(120, 90, 0, .1);
+}
+
+.tarjeta > div {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.tarjeta h3 {
+    color: #bd8500;
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.tarjeta p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* =================================
+   MENSAJES
+================================= */
+
+.mensajes {
+    background:
+        linear-gradient(
+            180deg,
+            #fff1a0,
+            #ffe272
+        );
+
+    position: relative;
+}
+
+.flores-mensajes {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    max-width: 380px;
+
+    margin: auto;
+}
+
+.flor-mensaje {
+    width: 65px;
+    height: 65px;
+
+    border: 0;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            #8b5b00 0 12%,
+            #ffd522 13% 35%,
+            #fff07a 36% 60%,
+            #f5b800 61%
+        );
+
+    font-size: 0;
+
+    box-shadow:
+        0 8px 15px
+        rgba(140, 100, 0, .2);
+
+    cursor: pointer;
+
+    transition:
+        transform .3s;
+}
+
+.flor-mensaje::after {
+    content: "🌼";
+
+    font-size: 38px;
+}
+
+.flor-mensaje:active {
+    transform: scale(.85);
+}
+
+.mensaje-popup {
+    position: fixed;
+
+    left: 50%;
+    bottom: 25px;
+
+    width: calc(100% - 35px);
+    max-width: 380px;
+
+    transform:
+        translate(-50%, 160%);
+
+    background: #fffdf0;
+
+    padding: 30px 25px;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 20px 60px
+        rgba(80, 55, 0, .3);
+
+    z-index: 500;
+
+    transition:
+        transform .5s ease;
+}
+
+.mensaje-popup.mostrar {
+    transform:
+        translate(-50%, 0);
+}
+
+#cerrarPopup {
+    position: absolute;
+
+    right: 15px;
+    top: 10px;
+
+    border: 0;
+
+    background: none;
+
+    font-size: 28px;
+
+    color: #9d7200;
+}
+
+.popup-flor {
+    font-size: 45px;
+}
+
+#textoPopup {
+    margin-top: 15px;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+}
+
+
+/* =================================
+   JARDÍN
+================================= */
+
+.jardin-seccion {
+    height: 550px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: #182447;
+}
+
+.jardin-cielo {
+    height: 65%;
+
+    position: relative;
+
+    background:
+        radial-gradient(
+            circle at 50% 80%,
+            #455b92,
+            #202e58 50%,
+            #111a35
+        );
+}
+
+.luna {
+    position: absolute;
+
+    top: 55px;
+    right: 45px;
+
+    font-size: 65px;
+
+    filter:
+        drop-shadow(
+            0 0 20px #fff4a5
+        );
+}
+
+.estrella {
+    position: absolute;
+
+    color: white;
+
+    animation:
+        piscar 2s infinite;
+}
+
+.estrella1 {
+    top: 50px;
+    left: 35px;
+}
+
+.estrella2 {
+    top: 130px;
+    left: 100px;
+}
+
+.estrella3 {
+    top: 80px;
+    left: 220px;
+}
+
+.estrella4 {
+    top: 160px;
+    right: 100px;
+}
+
+.jardin-tierra {
+    height: 35%;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            #37612f,
+            #173e22
+        );
+}
+
+.flor-jardin {
+    position: absolute;
+
+    font-size: 50px;
+
+    bottom: 55px;
+
+    filter:
+        drop-shadow(
+            0 0 8px #ffd83d
+        );
+
+    animation:
+        balanceo 3s ease-in-out infinite;
+}
+
+.fj1 {
+    left: 5%;
+}
+
+.fj2 {
+    left: 20%;
+    bottom: 30px;
+}
+
+.fj3 {
+    left: 37%;
+}
+
+.fj4 {
+    left: 55%;
+    bottom: 25px;
+}
+
+.fj5 {
+    left: 70%;
+}
+
+.fj6 {
+    left: 84%;
+    bottom: 35px;
+}
+
+.fj7 {
+    left: 45%;
+    bottom: 90px;
+}
+
+
+/* =================================
+   ESPECIAL
+================================= */
+
+.especial {
+    background:
+        linear-gradient(
+            180deg,
+            #fff7c9,
+            #fffdf0
+        );
+}
+
+.corazon-grande {
+    font-size: 65px;
+
+    animation:
+        latido 1.5s infinite;
+}
+
+.especial p {
+    max-width: 370px;
+
+    margin: 20px auto;
+
+    font-size: 18px;
+
+    line-height: 1.8;
+}
+
+
+/* =================================
+   NOCHE
+================================= */
+
+.noche {
+    padding: 90px 25px;
+
+    text-align: center;
+
+    color: #fff;
+
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            #3c5086,
+            #182344 65%,
+            #0d1429
+        );
+}
+
+.noche .etiqueta {
+    color: #ffe985;
+}
+
+.noche h2 {
+    color: #fff1a0;
+}
+
+.noche > p {
+    max-width: 350px;
+
+    margin: 20px auto;
+
+    line-height: 1.8;
+
+    font-size: 17px;
+}
+
+.luna-grande {
+    font-size: 75px;
+
+    margin-bottom: 20px;
+
+    filter:
+        drop-shadow(
+            0 0 25px #fff2a2
+        );
+}
+
+.noche-firma {
+    margin-top: 35px;
+
+    font-style: italic;
+
+    color: #ffe88a;
+
+    font-size: 20px;
+}
+
+
+/* =================================
+   FINAL
+================================= */
+
+.final {
+    padding: 90px 25px 110px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            180deg,
+            #fff5a7,
+            #ffd83d
+        );
+}
+
+.final h2 {
+    font-size: 43px;
+
+    color: #a66e00;
+
+    margin: 20px 0;
+}
+
+.final p {
+    font-size: 18px;
+
+    line-height: 1.7;
+}
+
+.final-corazon {
+    font-size: 60px;
+
+    margin: 30px 0;
+
+    animation: latido 1.5s infinite;
+}
+
+.lluvia-flores {
+    font-size: 30px;
+
+    letter-spacing: 12px;
+}
+
+.volver {
+    margin-top: 30px;
+
+    background: #a87500;
+}
+
+
+/* =================================
+   BOTÓN MÚSICA
+================================= */
+
+.musica-btn {
+    position: fixed;
+
+    right: 18px;
+    bottom: 18px;
+
+    width: 52px;
+    height: 52px;
+
+    border: 0;
+
+    border-radius: 50%;
+
+    background: rgba(255, 215, 45, .95);
+
+    box-shadow:
+        0 8px 25px
+        rgba(0, 0, 0, .2);
+
+    z-index: 1000;
+
+    font-size: 22px;
+
+    cursor: pointer;
+}
+
+
+/* =================================
+   ANIMACIONES
+================================= */
+
+@keyframes flotar {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+}
+
+@keyframes latido {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+}
+
+@keyframes pulso {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+}
+
+@keyframes girarFlor {
+
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+@keyframes piscar {
+
+    0%, 100% {
+        opacity: .3;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+}
+
+@keyframes balanceo {
+
+    0%, 100% {
+        transform: rotate(-5deg);
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+
+}
+
+
+/* =================================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 360px) {
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .crisantemo-grande {
+        width: 160px;
+        height: 160px;
+    }
+
+    .tarjetas {
+        gap: 9px;
+    }
+
+    .tarjeta {
+        padding: 18px 10px;
+    }
+
+    .tarjeta p {
+        font-size: 13px;
+    }
+
+}

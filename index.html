@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#ffd83d">
+
+    <title>Para Greverly 🌼</title>
+
+    <link rel="stylesheet" href="1.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         MÚSICA
+    ========================== -->
+
+    <audio id="musica" loop>
+        <source src="WhatsApp Audio 2026-04-20 at 10.24.15 PM.mpeg" type="audio/mpeg">
+    </audio>
+
+
+    <!-- =========================
+         PANTALLA DE ENTRADA
+    ========================== -->
+
+    <div id="pantallaEntrada">
+
+        <div class="entrada-contenido">
+
+            <div class="flor-entrada">🌼</div>
+
+            <p class="entrada-pequeno">
+                Tengo algo preparado para ti...
+            </p>
+
+            <h1>
+                Greverly
+            </h1>
+
+            <p class="entrada-texto">
+                Una pequeña sorpresa hecha
+                especialmente para ti.
+            </p>
+
+            <button id="abrirBtn">
+                💛 Abrir mi regalo
+            </button>
+
+            <p class="toque">
+                Toca para comenzar ✨
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         CONTENEDOR PRINCIPAL
+    ========================== -->
+
+    <main id="pagina">
+
+
+        <!-- =========================
+             FONDO DECORATIVO
+        ========================== -->
+
+        <div class="estrellas"></div>
+
+        <div class="petalos-container"></div>
+
+        <div class="corazones-container"></div>
+
+
+        <!-- =========================
+             HERO
+        ========================== -->
+
+        <section class="hero">
+
+            <div class="luz"></div>
+
+            <p class="sobre">
+                PARA UNA PERSONA MUY ESPECIAL
+            </p>
+
+            <h1>
+                Greverly
+                <span>🌼</span>
+            </h1>
+
+            <p class="hero-subtitulo">
+                Hay flores bonitas...
+                y luego estás tú.
+            </p>
+
+
+            <!-- CRISANTEMO -->
+
+            <div class="crisantemo-grande">
+
+                <div class="petalos"></div>
+
+                <div class="centro-flor">
+                    <span></span>
+                </div>
+
+            </div>
+
+
+            <p class="hero-mensaje">
+                Estas flores amarillas son para ti,
+                porque sé que te gustan los crisantemos
+                y quería regalarte algo diferente.
+            </p>
+
+            <button class="scroll-btn" onclick="irA('carta')">
+                Descubre lo que preparé ↓
+            </button>
+
+        </section>
+
+
+
+        <!-- =========================
+             CARTA
+        ========================== -->
+
+        <section id="carta" class="seccion carta">
+
+            <p class="etiqueta">
+                💌 UNA CARTA PARA TI
+            </p>
+
+            <h2>
+                Querida Greverly...
+            </h2>
+
+            <div class="carta-papel">
+
+                <div class="sello">
+                    🌼
+                </div>
+
+                <p>
+                    Quería regalarte flores amarillas,
+                    pero pensé que unas flores normales
+                    no serían suficientes.
+                </p>
+
+                <p>
+                    Así que hice este pequeño lugar
+                    solamente para ti.
+                </p>
+
+                <p>
+                    Cada crisantemo representa un
+                    pensamiento bonito, una sonrisa
+                    y un momento que quisiera que
+                    recuerdes.
+                </p>
+
+                <p>
+                    Espero que cuando veas estas flores
+                    puedas sonreír un poquito.
+                </p>
+
+                <p class="firma">
+                    Con mucho cariño 💛
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             RAZONES
+        ========================== -->
+
+        <section class="seccion razones">
+
+            <p class="etiqueta">
+                🌼 PEQUEÑOS DETALLES
+            </p>
+
+            <h2>
+                ¿Por qué tú?
+            </h2>
+
+            <p class="descripcion">
+                Porque hay personas que simplemente
+                hacen que los días se sientan diferentes.
+            </p>
+
+
+            <div class="tarjetas">
+
+                <div class="tarjeta">
+                    <div>✨</div>
+                    <h3>Tu sonrisa</h3>
+                    <p>
+                        Porque puede cambiar por completo
+                        el ambiente de un día.
+                    </p>
+                </div>
+
+
+                <div class="tarjeta">
+                    <div>💛</div>
+                    <h3>Tu forma de ser</h3>
+                    <p>
+                        Hay algo especial en la manera
+                        en que eres tú misma.
+                    </p>
+                </div>
+
+
+                <div class="tarjeta">
+                    <div>🌼</div>
+                    <h3>Tu belleza</h3>
+                    <p>
+                        No solamente por fuera,
+                        sino también por todo lo bonito
+                        que llevas dentro.
+                    </p>
+                </div>
+
+
+                <div class="tarjeta">
+                    <div>🦋</div>
+                    <h3>Lo especial que eres</h3>
+                    <p>
+                        Porque no hace falta una razón
+                        complicada para apreciar a alguien.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             MENSAJES
+        ========================== -->
+
+        <section class="seccion mensajes">
+
+            <p class="etiqueta">
+                💛 PARA TI
+            </p>
+
+            <h2>
+                Abre un mensaje
+            </h2>
+
+            <p class="descripcion">
+                Toca cualquiera de las flores.
+            </p>
+
+
+            <div class="flores-mensajes">
+
+                <button
+                    class="flor-mensaje"
+                    data-mensaje="Espero que nunca olvides lo especial que eres. 🌼">
+                    🌼
+                </button>
+
+                <button
+                    class="flor-mensaje"
+                    data-mensaje="Que siempre encuentres motivos para sonreír. 💛">
+                    🌼
+                </button>
+
+                <button
+                    class="flor-mensaje"
+                    data-mensaje="Si algún día tienes un día difícil, recuerda que después de la lluvia también vuelve a salir el sol. ☀️">
+                    🌼
+                </button>
+
+                <button
+                    class="flor-mensaje"
+                    data-mensaje="Hay personas que llegan y hacen que todo se sienta un poquito más bonito. 🦋">
+                    🌼
+                </button>
+
+                <button
+                    class="flor-mensaje"
+                    data-mensaje="Este pequeño jardín existe solamente para recordarte lo bonita que es tu presencia. 🌼">
+                    🌼
+                </button>
+
+            </div>
+
+
+            <div id="mensajePopup" class="mensaje-popup">
+
+                <button id="cerrarPopup">
+                    ×
+                </button>
+
+                <div class="popup-flor">
+                    🌼
+                </div>
+
+                <p id="textoPopup"></p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             JARDÍN
+        ========================== -->
+
+        <section class="jardin-seccion">
+
+            <div class="jardin-cielo">
+
+                <div class="luna">
+                    🌙
+                </div>
+
+                <div class="estrella estrella1">✦</div>
+                <div class="estrella estrella2">✧</div>
+                <div class="estrella estrella3">✦</div>
+                <div class="estrella estrella4">✧</div>
+
+            </div>
+
+
+            <div class="jardin-tierra">
+
+                <div class="flor-jardin fj1">🌼</div>
+                <div class="flor-jardin fj2">🌼</div>
+                <div class="flor-jardin fj3">🌼</div>
+                <div class="flor-jardin fj4">🌼</div>
+                <div class="flor-jardin fj5">🌼</div>
+                <div class="flor-jardin fj6">🌼</div>
+                <div class="flor-jardin fj7">🌼</div>
+
+                <div class="pasto"></div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             MENSAJE PROFUNDO
+        ========================== -->
+
+        <section class="seccion especial">
+
+            <div class="corazon-grande">
+                💛
+            </div>
+
+            <h2>
+                Y si algún día lo olvidas...
+            </h2>
+
+            <p>
+                vuelve aquí y recuerda que en algún
+                lugar existe un pequeño jardín lleno
+                de crisantemos amarillos que fue hecho
+                pensando en ti.
+            </p>
+
+            <p>
+                No necesitas hacer nada especial.
+                Simplemente sigue siendo tú.
+            </p>
+
+        </section>
+
+
+
+        <!-- =========================
+             BUENAS NOCHES
+        ========================== -->
+
+        <section class="noche">
+
+            <div class="luna-grande">
+                🌙
+            </div>
+
+            <p class="etiqueta">
+                🌙 PARA CUANDO LLEGUE LA NOCHE
+            </p>
+
+            <h2>
+                Descansa, Greverly
+            </h2>
+
+            <p>
+                Que esta noche puedas descansar,
+                dejar atrás todo lo que te preocupó
+                durante el día y despertar mañana
+                con una sonrisa.
+            </p>
+
+            <p>
+                Que tus sueños estén llenos de cosas
+                bonitas.
+            </p>
+
+            <div class="noche-firma">
+                Dulces sueños 💛
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             FINAL
+        ========================== -->
+
+        <section class="final">
+
+            <div class="lluvia-flores">
+                🌼 🌼 🌼
+            </div>
+
+            <h2>
+                Para mi niña Greverly
+            </h2>
+
+            <p>
+                Con cariño hice este pequeño rincón
+                para ti.
+            </p>
+
+            <p>
+                Espero que te haya gustado. 🌼
+            </p>
+
+            <div class="final-corazon">
+                💛
+            </div>
+
+            <button
+                class="volver"
+                onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                🌼 Volver al principio
+            </button>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =========================
+         CONTROL DE MÚSICA
+    ========================== -->
+
+    <button id="musicaBtn" class="musica-btn">
+        🎵
+    </button>
+
+
+    <script src="1.js"></script>
+
+</body>
+
+</html>
